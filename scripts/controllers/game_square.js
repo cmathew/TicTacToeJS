@@ -3,11 +3,12 @@ ticTacToeApp.controller('GameSquareController', ['$scope', 'GameService', functi
 		//player fills square with their symbol
 		if (!$scope.player){
 			$scope.player = $scope.currentPlayer;
-			$scope.gameCtrl.changeTurn();
 		}
 		//allow undo
 		else if ($scope.player == $scope.currentPlayer) {
 			$scope.player = null;
-		}		
+		}
+		
+		$scope.gameCtrl.setPlayerForSquare($scope.row, $scope.column, $scope.player);
 	};
 }]);

@@ -29,12 +29,12 @@
 			</form>
 		</div>
 		<div ng-controller="GameController as gameCtrl">
-			<h2>Your move, {{currentPlayer}}</h2>
+			<h2 ng-if="currentPlayer">Your move, {{currentPlayer}}</h2>
 			<ul class="board">
-				<li class="board-row" ng-repeat="row in game.rows">
+				<li class="board-row" ng-repeat="row in rows">
 					<ul class="board-row-content">
-						<li class="board-square" ng-repeat="col in row">
-							<board-square player="{{col.player}}"></board-square>
+						<li class="board-square" ng-repeat="square in row">
+							<board-square player="{{square.player}}" row="{{square.row}}" column="{{square.column}}"></board-square>
 						</li>
 					</ul>
 				</li>

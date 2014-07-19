@@ -6,4 +6,9 @@ ticTacToeApp.service('GameService', function(){
 	this.start = function() {
 		this.started = true;
 	};
+	
+	this.end = function(player) {
+		alert('Player ' + player + ' Wins!');
+		this.started = false;
+	};	
 });
