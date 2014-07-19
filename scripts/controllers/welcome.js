@@ -1,3 +1,3 @@
-ticTacToeApp.controller('WelcomeCtrl', function ($scope) {
+ticTacToeApp.controller('WelcomeCtrl', function ($scope, gameService) {
 	$scope.message = "hello";
 });
