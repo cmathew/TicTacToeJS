@@ -6,14 +6,17 @@
 			Chris Mathew - Tic-Tac-Toe Demo
 		</title>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
-		<script src="scripts/angular.js" type="text/javascript"></script>
-		<script type="text/javascript">
-			var ticTacToeApp = angular.module('ticTacToeApp', []);
-		</script>
+		
+		<script src="scripts/angular.js" type="text/javascript"></script>		
+		<script src="app.js" type="text/javascript"></script>		
+		
 		<script src="scripts/services/player.js" type="text/javascript"></script>		
-		<script src="scripts/services/game.js" type="text/javascript"></script>				
+		<script src="scripts/services/game.js" type="text/javascript"></script>		
+		
 		<script src="scripts/controllers/welcome.js" type="text/javascript"></script>
-		<script src="scripts/controllers/game.js" type="text/javascript"></script>		
+		<script src="scripts/controllers/game.js" type="text/javascript"></script>	
+		
+		<script src="scripts/directives/board_square.js" type="text/javascript"></script>		
 	</head>
 	<body>
 		<h1>Welcome to Tic-Tac-Toe!</h1>
@@ -27,7 +30,11 @@
 		<div class="board" ng-controller="GameCtrl">
 		  <ul>
 			<li ng-repeat="row in game.rows">
-				hi
+				<ul>
+					<li ng-repeat="col in row">
+						<board-square player="{{col.player}}"></board-square>
+					</li>
+				</ul>
 			</li>
 		  </ul>
 		</div>

@@ -10,7 +10,7 @@ ticTacToeApp.controller('GameCtrl', ['$scope', 'gameService', function ($scope, 
 		for (var i = 0; i < size; i++) {
 			self.game.rows.push([]);
 			for (var j = 0; j < size; j++) {
-				self.game.rows[i].push({});
+				self.game.rows[i].push({player:'X'});
 			}
 		}	
 	});
