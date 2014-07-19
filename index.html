@@ -7,11 +7,17 @@
 		</title>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
 		<script src="scripts/angular.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var ticTacToeApp = angular.module('ticTacToeApp', []);
+		</script>
 		<script src="scripts/services/player.js" type="text/javascript"></script>		
 		<script src="scripts/controllers/welcome.js" type="text/javascript"></script>
 		<script src="scripts/controllers/game.js" type="text/javascript"></script>		
 	</head>
 	<body>
+		<div class="board" ng-controller="WelcomeCtrl">
+			{{message}}
+		</div>
 		<div class="board" ng-controller="GameCtrl">
 			{{name}}
 		</div>
