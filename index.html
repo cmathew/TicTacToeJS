@@ -20,11 +20,11 @@
 			<h1>Welcome to Tic-Tac-Toe!</h1>
 			<form>
 				<label for="grid-size">Grid size</label>
-				<input type="text" id="grid-size" name="grid-size" value="3"/>
+				<input type="text" id="grid-size" name="grid-size" value="3" ng-model="game.size"/>
 			</form>
 		</div>
 		<div class="board" ng-controller="GameCtrl">
-			{{name}}
+			{{game.size}}
 		</div>
 	</body>
 </html>
