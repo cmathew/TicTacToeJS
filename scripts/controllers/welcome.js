@@ -1,8 +1,8 @@
 ticTacToeApp.controller('WelcomeCtrl', ['$scope', 'gameService', function ($scope, gameService) {
 	$scope.message = "hello";
-	$scope.game = gameService.game;
+	$scope.gameSettings = gameService;
 	
 	this.startGame = function(){
-		gameService.game.started = true;
+		gameService.start();
 	}
 }]);

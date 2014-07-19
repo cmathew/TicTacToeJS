@@ -18,16 +18,18 @@
 	<body>
 		<h1>Welcome to Tic-Tac-Toe!</h1>
 		<div class="board" ng-controller="WelcomeCtrl as welCtrl">
-			<form ng-submit="welCtrl.startGame()" ng-if="!game.started">
+			<form ng-submit="welCtrl.startGame()" ng-if="!gameSettings.started">
 				<label for="grid-size">Grid size</label>
-				<input type="text" ng-pattern="/^\d+$/" id="grid-size" name="grid-size" value="3" ng-model="game.size"/>
+				<input type="text" ng-pattern="/^\d+$/" id="grid-size" name="grid-size" ng-model="gameSettings.size"/>
 				<input type="submit"></input>
 			</form>
 		</div>
 		<div class="board" ng-controller="GameCtrl">
-			<div ng-if="game.started">
-				{{game.size}}
-			</div>
+		  <ul>
+			<li ng-repeat="row in game.rows">
+				hi
+			</li>
+		  </ul>
 		</div>
 	</body>
 </html>
