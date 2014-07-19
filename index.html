@@ -27,16 +27,14 @@
 				<input type="submit"></input>
 			</form>
 		</div>
-		<div class="board" ng-controller="GameCtrl">
-		  <ul>
-			<li ng-repeat="row in game.rows">
+		<ul class="board"  ng-controller="GameCtrl">
+			<li class="board-row" ng-repeat="row in game.rows">
 				<ul>
-					<li ng-repeat="col in row">
+					<li class="board-square" ng-repeat="col in row">
 						<board-square player="{{col.player}}"></board-square>
 					</li>
 				</ul>
 			</li>
-		  </ul>
-		</div>
+		</ul>
 	</body>
 </html>
