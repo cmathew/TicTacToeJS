@@ -15,6 +15,7 @@
 		
 		<script src="scripts/controllers/welcome.js" type="text/javascript"></script>
 		<script src="scripts/controllers/game.js" type="text/javascript"></script>	
+		<script src="scripts/controllers/game_square.js" type="text/javascript"></script>	
 		
 		<script src="scripts/directives/board_square.js" type="text/javascript"></script>		
 	</head>
@@ -27,14 +28,17 @@
 				<input type="submit"></input>
 			</form>
 		</div>
-		<ul class="board"  ng-controller="GameCtrl">
-			<li class="board-row" ng-repeat="row in game.rows">
-				<ul>
-					<li class="board-square" ng-repeat="col in row">
-						<board-square player="{{col.player}}"></board-square>
-					</li>
-				</ul>
-			</li>
-		</ul>
+		<div ng-controller="GameController as gameCtrl">
+			<h2>Your move, {{currentPlayer}}</h2>
+			<ul class="board">
+				<li class="board-row" ng-repeat="row in game.rows">
+					<ul class="board-row-content">
+						<li class="board-square" ng-repeat="col in row">
+							<board-square player="{{col.player}}"></board-square>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</body>
 </html>

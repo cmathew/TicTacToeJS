@@ -1,4 +1,3 @@
-<div>	
-	<div ng-if="player" class="player-symbol">{{player}}</div>
-	<div ng-if="!player" ng-click="move"></div>
+<div class="square-content" ng-controller="GameSquareController as squareCtrl" ng-click="squareCtrl.select()">	
+	<div ng-if="player" ng-class="{'player-symbol': true, x: player=='X'}">{{player}}</div>
 </div>

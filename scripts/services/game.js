@@ -1,5 +1,5 @@
-ticTacToeApp.service('gameService', function(){
-	//global game model
+ticTacToeApp.service('GameService', function(){
+	//global game settings
 	this.size = 3;
 	this.started = false;
 	
